@@ -12,12 +12,15 @@ $(document).ready(function(){
  $(document).on("click", "[id='seach']", function() {
   $('#testTable').each(function () {
    $(this).find('td.code').each(function () {
+    $(this).next().attr('style', '');
+   }); 
+   $(this).find('td.code').each(function () {
     if($(this).text() == $('#search_word').val()) {
-    	alert($(this).next().text());
+    	//alert($(this).next().text());
      	$(this).next().attr('style', 'background-color:yellow');
      	return false;
     } else {
-     $(this).attr('style', '');
+     $(this).next().attr('style', '');
     }
    });
   });
