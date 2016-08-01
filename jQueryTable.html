@@ -49,17 +49,18 @@ $(document).ready(function(){
 <br />
 入力した文字列が含まれるセルの背景色が黄色に変わります&#12290;<br />
 <br />
-<input type="text" id="search_word"">
+<input type="text" id="search_word">
 <button type="button" id="seach"> Search </button>
 <table id="testTable" border ="1">
 <tr>
-<th>Key</th><th>Value</th>
+<th>Key</th><th>Value1</th><th>Value2</th>
 </tr>
 <script type="text/javascript">
 for (i=0; i<=10;i++){
 	document.write("<tr>");
 	document.write("<td class=\"code\">" + i + "</td>");
 	document.write("<td>" + Math.floor(Math.random() *1000) + "</td>");
+  document.write("<td>" + Math.floor(Math.random() *2000) + "</td>");
 	document.write("</tr>");
 }
 </script>
